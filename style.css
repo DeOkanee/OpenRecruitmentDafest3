@@ -173,6 +173,10 @@ i {
   padding: 5px 0;
 }
 
-.container a {
-  color: rgb(49, 90, 223);
+.bawah a {
+  color: rgb(35, 187, 233);
+}
+
+.bawah p {
+  color: white;
 }
