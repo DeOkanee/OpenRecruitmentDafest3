@@ -24,7 +24,6 @@ h1 {
   font-size: 140%;
   align-items: center;
   color: rgb(255, 255, 255);
-  -webkit-text-stroke: 1px black;
 }
 
 .Pengumuman {
@@ -39,7 +38,6 @@ h1 {
 .social-media {
   margin-bottom: 0%;
   margin-top: 15%;
-  padding-top: 0%;
   padding-bottom: 15%;
   background-color: #787a91;
   background-attachment: fixed;
@@ -49,8 +47,8 @@ h1 {
   flex-direction: column;
 }
 
-a {
-  color: #fff;
+.container a {
+  color: #ffffff;
   text-decoration: none;
   font-size: 1.2rem;
   margin: 10px 10px;
@@ -58,13 +56,22 @@ a {
   align-items: center;
 }
 
-p {
+.container p {
   font-size: 1.1rem;
   color: rgb(255, 255, 255);
 }
 
-h2 {
+.sosial h2 {
   color: rgb(255, 255, 255);
+}
+
+.sosial a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 10px 10px;
+  display: flex;
+  align-items: center;
 }
 
 .pendaftaran {
@@ -148,10 +155,24 @@ img {
 
 span {
   margin-left: 1%;
+  color: #ffffff;
 }
 
 i {
   font-size: 1.7rem;
   margin-right: 10%;
   margin-left: 10%;
+}
+
+/* COPRIGHT */
+.bawah {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #222222;
+  padding: 5px 0;
+}
+
+.container a {
+  color: rgb(49, 90, 223);
 }
