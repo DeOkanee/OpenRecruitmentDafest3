@@ -1,0 +1,183 @@
+<script>
+  if (
+    confirm("Mohon maaf, web kami akan ditutup. Klik OK untuk keluar dari web.")
+  ) {
+    window.close();
+  }
+</script>
+
+<script>
+  alert("INGAT !!, Kuota Terbatas ayo daftar");
+</script>
+
+pop up keluar web
+<script>
+  alert("Mohon maaf, web kami akan ditutup. Klik OK untuk keluar dari web.");
+  window.close();
+</script>
+
+WAKTU
+
+<script>
+  // Tentukan waktu akhir di sini dengan format 24 jam
+  var waktuAkhir = "02:00";
+
+  // Dapatkan waktu saat ini
+  var sekarang = new Date();
+  var jam = sekarang.getHours();
+  var menit = sekarang.getMinutes();
+
+  // Konversi waktu akhir ke dalam milidetik sejak tengah malam
+  var waktuAkhirArray = waktuAkhir.split(":");
+  var waktuAkhirJam = parseInt(waktuAkhirArray[0]);
+  var waktuAkhirMenit = parseInt(waktuAkhirArray[1]);
+  var waktuAkhirMs = (waktuAkhirJam * 60 + waktuAkhirMenit) * 60 * 1000;
+
+  // Konversi waktu saat ini ke dalam milidetik sejak tengah malam
+  var sekarangMs = (jam * 60 + menit) * 60 * 1000;
+
+  // Hitung selisih waktu antara waktu akhir dan waktu saat ini
+  var selisihMs = waktuAkhirMs - sekarangMs;
+
+  // Konversi selisih waktu menjadi jam dan menit
+  var selisihJam = Math.floor(selisihMs / (60 * 60 * 1000));
+  var selisihMenit = Math.ceil(
+    (selisihMs - selisihJam * 60 * 60 * 1000) / (60 * 1000)
+  );
+
+  // Tampilkan pesan alert jika waktu akhir sudah dekat
+  if (selisihJam == 0 && selisihMenit <= 30) {
+    alert(
+      "Mohon maaf, web kami akan ditutup dalam " +
+        selisihMenit +
+        " menit. Silakan selesaikan aktivitas Anda dan simpan perubahan jika ada."
+    );
+  }
+</script>
+
+ada lagi
+
+<script>
+  // Tentukan waktu keluar di sini dengan format 24 jam
+  var waktuKeluar = "18:00";
+
+  // Dapatkan waktu saat ini
+  var sekarang = new Date();
+  var jam = sekarang.getHours();
+  var menit = sekarang.getMinutes();
+
+  // Konversi waktu keluar ke dalam milidetik sejak tengah malam
+  var waktuKeluarArray = waktuKeluar.split(":");
+  var waktuKeluarJam = parseInt(waktuKeluarArray[0]);
+  var waktuKeluarMenit = parseInt(waktuKeluarArray[1]);
+  var waktuKeluarMs = (waktuKeluarJam * 60 + waktuKeluarMenit) * 60 * 1000;
+
+  // Konversi waktu saat ini ke dalam milidetik sejak tengah malam
+  var sekarangMs = (jam * 60 + menit) * 60 * 1000;
+
+  // Hitung selisih waktu antara waktu keluar dan waktu saat ini
+  var selisihMs = waktuKeluarMs - sekarangMs;
+
+  // Tampilkan pesan alert jika waktu keluar sudah dekat
+  if (selisihMs <= 0) {
+    alert(
+      "Sesi Anda telah berakhir. Silakan simpan perubahan Anda dan keluar dari web."
+    );
+    window.close();
+  } else {
+    setTimeout(function () {
+      alert(
+        "Sesi Anda akan berakhir dalam beberapa detik. Silakan simpan perubahan Anda dan keluar dari web."
+      );
+      window.close();
+    }, selisihMs);
+  }
+</script>
+
+menghubungi admin
+<script>
+  // Menampilkan pesan alert
+  alert("Web sudah ditutup, silakan hubungi admin");
+
+  // Mengalihkan ke aplikasi WhatsApp setelah mengklik OK
+  window.addEventListener("load", function () {
+    var url = "https://wa.me/6285738187967"; // Ubah nomor telepon WhatsApp
+    setTimeout(function () {
+      window.location.href = url;
+    }, 1500); // Mengalihkan ke URL setelah 3 detik
+  });
+</script>
+
+.iconkiri img { width: 10%; height: 33px; float: left; margin: 5% auto;
+align-items: center; } .iconkanan img { width: 15%; height: 33px; float: right;
+margin: 5% auto; top: 3px; }
+
+<style>
+  /* Membuat tampilan pesan alert yang keren */
+  .alert {
+    background-color: #f44336;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 18px;
+    font-weight: bold;
+    animation: slidein 0.5s, fadeout 0.5s 3s;
+  }
+
+  /* Animasi slide in */
+  @keyframes slidein {
+    from {
+      bottom: -100px;
+    }
+    to {
+      bottom: 0;
+    }
+  }
+
+  /* Animasi fade out */
+  @keyframes fadeout {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  /* Membuat tampilan icon silang (X) */
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  /* Mengubah tampilan icon silang (X) saat disorot */
+  .closebtn:hover {
+    color: black;
+  }
+</style>
+
+<div class="alert">
+  Web sudah ditutup, silakan hubungi admin
+  <span class="closebtn" onclick="closeAlert()">&times;</span>
+</div>
+
+<script>
+  // Mengalihkan ke aplikasi WhatsApp setelah mengklik OK
+  function closeAlert() {
+    var url = "https://wa.me/6281234567890"; // Ubah nomor telepon WhatsApp
+    window.location.href = url;
+  }
+
+  // Menutup halaman web setelah 3 detik
+  setTimeout(function () {
+    window.close();
+  }, 3000);
+</script>
