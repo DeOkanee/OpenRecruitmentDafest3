@@ -20,7 +20,7 @@ header {
 
 .iconkiri img {
   width: 4%;
-  height: 40px;
+  height: 49px;
   float: left;
   margin-left: 3%;
   margin-top: 1%;
@@ -28,6 +28,8 @@ header {
 }
 
 h1 {
+  align-items: center;
+  margin-top: 22px;
   font-family: fantasy;
   font-size: 140%;
   text-align: center;
@@ -36,7 +38,7 @@ h1 {
 
 .iconkanan img {
   width: 5%;
-  height: 40px;
+  height: 49px;
   float: right;
   margin-top: 1%;
   margin-bottom: 1%;
@@ -44,8 +46,15 @@ h1 {
   margin-left: 8%;
 }
 
+.container {
+  margin-top: 12%;
+}
+
+.sosial {
+  margin-top: 5%;
+}
+
 .Pengumuman {
-  margin-top: 25%;
   margin-bottom: 0%;
   display: flex;
   justify-content: center;
@@ -55,7 +64,6 @@ h1 {
 
 .social-media {
   margin-bottom: 0%;
-  margin-top: 15%;
   padding-bottom: 15%;
   background-color: #787a91;
   background-attachment: fixed;
@@ -135,6 +143,45 @@ h1 {
   margin-left: 8%;
 }
 
+@media screen and (max-width: 480px) {
+  header {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    z-index: 9999;
+    background-color: #0daada;
+    padding: 10px auto;
+    top: 0%;
+  }
+
+  .iconkiri img {
+    width: 9%;
+    height: 33px;
+    float: left;
+    margin-left: 3%;
+    margin-top: 4%;
+    margin-bottom: 2%;
+  }
+
+  h1 {
+    font-family: fantasy;
+    font-size: 120%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+  }
+
+  .iconkanan img {
+    width: 11%;
+    height: 32px;
+    float: right;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 4%;
+    margin-left: 8%;
+  }
+
+}
+
 @media screen and (max-width: 767px) {
   header {
     width: 100%;
@@ -148,7 +195,7 @@ h1 {
 
   .iconkiri img {
     width: 9%;
-    height: 30px;
+    height: 33px;
     float: left;
     margin-left: 3%;
     margin-top: 2%;
@@ -157,7 +204,7 @@ h1 {
 
   h1 {
     font-family: fantasy;
-    font-size: 110%;
+    font-size: 120%;
     text-align: center;
     color: rgb(255, 255, 255);
   }
@@ -170,6 +217,14 @@ h1 {
     margin-bottom: 2%;
     margin-right: 4%;
     margin-left: 8%;
+  }
+
+  .container {
+    margin-top: 20%;
+  }
+
+  .sosial {
+    margin-top: 10%;
   }
 
   .pengumuman {

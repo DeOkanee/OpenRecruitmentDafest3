@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <head>
       <title>Open Recruitment</title>
       <link
@@ -12,17 +13,29 @@
       />
       <link rel="stylesheet" href="style.css" />
       <link rel="stylesheet" href="/img/footer.css" />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
     </head>
-    <title>Document</title>
   </head>
+
   <body>
     <header class="atas">
       <div class="iconkiri">
-        <img src="/img/LOGO UHN.png" alt="logo UHN" class="UHN" />
-        <img src="/img/LOGO ORKEMAS.png" alt="logo orkemas" />
+        <img
+          src="https://i.postimg.cc/cJSvnvTk/LOGO-UHN.png"
+          alt="logo UHN"
+          class="UHN"
+        />
+        <img
+          src="https://i.postimg.cc/KYGZbB0b/LOGO-ORKEMAS.png"
+          alt="logo orkemas"
+        />
       </div>
       <div class="iconkanan">
-        <img src="/img/LOGO DAFEST.png" alt="logo dafest" />
+        <img
+          src="https://i.postimg.cc/MpF8CNf7/LOGO-DAFEST.png"
+          alt="logo dafest"
+        />
       </div>
       <h1>DAFEST 3.0</h1>
     </header>
@@ -31,13 +44,13 @@
     <section class="container">
       <div class="Pengumuman">
         <p>Silakan Melakukan Pendaftaran</p>
-        <a href="#" class="pendaftaran">
+        <a href="#" class="pendaftaran" id="daftar">
           <img src="/img/pendaftaran1.png" alt="image" />
           <span>Daftar</span>
         </a>
 
-        <p>Formulir Yang Di Bawa Saat Wawancara</p>
-        <a href="#" class="formulir">
+        <p>Formulir Yang Di Bawa Saat Interview</p>
+        <a href="#" class="formulir" id="formulir">
           <img src="/img/formulir.png" alt="image" />
           <span>Formulir</span>
         </a>
@@ -47,18 +60,17 @@
     <section class="sosial">
       <div class="social-media">
         <h2>Contact Person</h2>
-        <a href="https://wa.me/62881038856541" class="whatsapp1">
+        <a href="https://wa.me/6287858616668" class="whatsapp3">
           <i class="fab fa-whatsapp"></i>
-          <span>Pande Rai</span>
+          <span>Gusti Ayu</span>
         </a>
         <a href="https://wa.me/6282144788802" class="whatsapp2">
           <i class="fab fa-whatsapp"></i>
           <span>Edi Suastawan</span>
         </a>
-
-        <a href="https://wa.me/6287858616668" class="whatsapp3">
+        <a href="https://wa.me/62881038856541" class="whatsapp1">
           <i class="fab fa-whatsapp"></i>
-          <span>Gusti Ayu</span>
+          <span>Pande Rai</span>
         </a>
       </div>
     </section>
@@ -74,6 +86,65 @@
       </div>
     </footer>
     <!--POP UP-->
-    <script></script>
+    <script>
+      //muncul saat di klik
+      const daftar = document.getElementById("daftar");
+      daftar.addEventListener("click", function () {
+        Swal.fire({
+          icon: "info",
+          title: "Oops...",
+          text: "Pendaftaran Sudah Ditutup !",
+        });
+      });
+
+      const formulir = document.getElementById("formulir");
+      formulir.addEventListener("click", function () {
+        Swal.fire({
+          icon: "info",
+          title: "Oops...",
+          text: "Formulir Sudah Ditutup !",
+        });
+      });
+
+      //pertama muncul
+      const swals = Swal.mixin({
+        cancelButtonColor: "#DC143C",
+        confirmButtonColor: "#00008B",
+        allowOutsideClick: false,
+      });
+      const swap = iloveu.mixin({
+        cancelButtonColor: "#909090",
+        confirmButtonColor: "#2B2B2B",
+        allowOutsideClick: true,
+      });
+    </script>
+    <!--MUNCUL AWAL-->
+    <script>
+      async function start() {
+        await swals.fire("INGAT !! <br> Kuota Terbatas Ayo Daftar");
+        await swals.fire("Sat Set Sat Set Daftar <br> Besok Udah Tutup Lo...");
+        setTimeout(mulai, 900);
+        play();
+      }
+      start();
+
+      function showDiv() {
+        document.getElementById("fotogoy").style.animation =
+          "fotogoy 2s ease infinite";
+        document.getElementById("Content").style.opacity = "5";
+      }
+
+      function mulai() {
+        ketiknm();
+        showDiv();
+      }
+
+      function ketiknm() {
+        document.getElementById("pergeseran").style.opacity = "1";
+        document.getElementById("pergeseran").style.visibility = "visible";
+        document.getElementById("pergeseran").tyle.margin = "10px 0";
+      }
+      //pertama
+    </script>
   </body>
 </html>
